@@ -10,24 +10,85 @@ export default {
   data() {
     return {
       mindmapNodes: [
-        {
-          id: "xxx",
+      {
+          id: "Index",
           parentId: null,
-          title: "父节点",
+          title: "Index",
           extra: {
             a: 1,
             b: "x",
-          },
+          }
         },
         {
-          id: "yyy",
-          parentId: "xxx",
-          title: "子节点",
-          extra: {
-            a: 2,
-            b: "y",
-          },
+          id: "Page",
+          parentId: "Index",
+          title: "Page",
+
         },
+        {
+          id: "bottomSheet",
+          parentId: "Index",
+          title: "bottomSheet",
+
+        },
+        {
+          id: "dialog",
+          parentId: "Index",
+          title: "dialog",
+
+        },
+        {
+          id: "AppLock",
+          parentId: "Page",
+          title: "AppLock",
+          isFolded: true,
+          resources: [
+            {
+              type: "PIC",
+              url: require("/Users/qingdu/Desktop/position/appLock.png")
+            }
+          ]
+        },
+        {
+          id: "NavBar",
+          parentId: "AppLock",
+          title: "NavBar",
+          extra: {
+            a: 3,
+            b: "x",
+          },
+          resources: [
+            {
+              type: "PIC",
+              url: require("/Users/qingdu/Desktop/position/appLock,appLock,navBar.png")
+            }
+          ]
+        },       
+        {
+          id: "backButton",
+          parentId: "NavBar",
+          title: "backButton",
+          resources: [
+            {
+              type: "PIC",
+              url: require("/Users/qingdu/Desktop/position/appLock,appLock,navBar,backButton.png")
+            }
+          ]
+        },
+        {
+          id: "#setting",
+          parentId: "AppLock",
+          title: "setting",
+        },{
+          id: "#me",
+          parentId: "#setting",
+          title: "me",
+        },
+        {
+          id: "#root",
+          parentId: "#me",
+          title: "root",
+        }
       ],
     };
   },
